@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: avrea-ubuntu-latest-2-vcpu
     name: Typecheck + build (Node ${{ matrix.node }})
     strategy:
       matrix:
@@ -40,7 +40,7 @@ jobs:
   # can't — a board that renders but ignores clicks has shipped twice. Every
   # PR must pass them.
   regression:
-    runs-on: ubuntu-latest
+    runs-on: avrea-ubuntu-latest-2-vcpu
     name: Regression (e2e + browser)
     timeout-minutes: 20
     steps:
@@ -85,7 +85,7 @@ jobs:
         run: npm run test:resume-ui
 
   docker:
-    runs-on: ubuntu-latest
+    runs-on: avrea-ubuntu-latest-2-vcpu
     name: Docker image builds
     steps:
       - uses: actions/checkout@v4

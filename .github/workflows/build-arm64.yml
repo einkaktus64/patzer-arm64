@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04-arm
+    runs-on: avrea-ubuntu-24.04-arm-2-vcpu
     permissions:
       contents: read
       packages: write
